@@ -1,0 +1,235 @@
+artid,runid,script_num,errmsg,logtxt
+aejapp_9_4_5,1,1,"","
+. clear
+
+. "
+aejapp_9_4_5,2,1,"","
+. set more off
+
+. "
+aejapp_9_4_5,3,1,"","
+. global ps            ""/Users/claudioferraz/Dropbox/Nucleos
+> _final""
+
+. "
+aejapp_9_4_5,4,1,"","
+. global RepDir        ""${ps}/Replication""
+
+. "
+aejapp_9_4_5,5,1,"","
+. use ""${repbox_path}/DataCode_replication/RochaFerrazSoares_Data1920shape.dta"", clear
+
+. "
+aejapp_9_4_5,6,1,"","
+. eststo summstats: estpost summarize settlement ln_distk la
+> t longitude geo_altitude geo_solo_sarg geo_solo_scambi geo_solo_sespondo geo_
+> solo_slat sh_lit72 sh_childschool72 sh_slaves72 sh_foreign72 pop72 railway72 
+> sh_lit20 schools_child20 teachers_child20 pop20 sh_foreign20 sh_foreign_lit20
+>  sh_smallholders20 coffee_ha20 value_land20 railway20 sh_emp_ag20 sh_emp_ind2
+> 0 sh_emp_serv20 sh_lit40 schools_child40 sh_child_school40  pop40 sh_emp_ag40
+>  sh_emp_ind40 sh_emp_serv40 sh_lit00 years_schooling00 sh_child_school00 scho
+> ols_child00 teachers_child00 income_pc00 sh_emp_ag00 sh_emp_ind00 sh_emp_serv
+> 00
+
+             |  e(count)   e(sum_w)    e(mean)     e(Var)      e(sd) 
+-------------+-------------------------------------------------------
+  settlement |       202        202   .0990099   .0896508   .2994174 
+    ln_distk |       202        202   5.138735   .4799046   .6927515 
+    latitude |       202        202  -22.59449   .9788387   .9893628 
+   longitude |       202        202  -47.60675    1.97052   1.403752 
+geo_altitude |       202        202   6.023396   3.483198   1.866333 
+geo_solo_s~g |       202        202   .3737082   .1893953   .4351957 
+geo_solo_s~i |       202        202   .1139596   .0900467   .3000778 
+geo_solo_s~o |       202        202   .0122387   .0091126   .0954598 
+geo_solo_s~t |       202        202   .5457076   .2073295   .4553344 
+    sh_lit72 |       202        202   .2022849   .0121142   .1100643 
+sh_childs~72 |       202        202   .1450953   .0101898   .1009445 
+ sh_slaves72 |       202        202   .1544307   .0074002   .0860247 
+sh_foreign72 |       202        202   .0121344   .0002434   .0155999 
+       pop72 |       202        202   11147.44   5.18e+07   7197.727 
+   railway72 |       202        202   .0247525   .0242599   .1557559 
+    sh_lit20 |       202        202   .2957997   .0098102   .0990466 
+schools_c~20 |       202        202   .3873777   .1417941   .3765556 
+teachers_~20 |       202        202   9.562178   48.13384   6.937856 
+       pop20 |       202        202   22634.54   1.86e+09   43101.73 
+sh_foreign20 |       202        202   .1254726   .0092024   .0959294 
+sh_forei~t20 |       202        202   .4365435   .0246817   .1571042 
+sh_smallh~20 |       202        202   .6683183   .0354315   .1882325 
+ coffee_ha20 |       202        202   .0315589   .0017007   .0412395 
+value_land20 |       202        202   190.9901   23601.68   153.6284 
+   railway20 |       202        202   .6930693   .2137826   .4623663 
+ sh_emp_ag20 |       202        202   .7843267   .0175974   .1326553 
+sh_emp_ind20 |       202        202    .090816   .0051047   .0714473 
+sh_emp_se~20 |       202        202   .1248573    .005109   .0714773 
+    sh_lit40 |       202        202   .4342459   .0171684   .1310281 
+schools_c~40 |       202        202   5.633881   3.392573   1.841894 
+sh_child_~40 |       202        202   .3381126   .0144108   .1200449 
+       pop40 |       202        202   36954.87   1.04e+10   102182.6 
+ sh_emp_ag40 |       201        201   .7604633   .0310027   .1760757 
+sh_emp_ind40 |       201        201   .0842091   .0098049   .0990195 
+sh_emp_se~40 |       201        201   .1553275   .0110569   .1051517 
+    sh_lit00 |       202        202   .8870124   .0006614   .0257181 
+years_sch~00 |       202        202   5.538172   .4354469    .659884 
+sh_child_~00 |       202        202    .962646   .0003472   .0186332 
+schools_c~00 |       202        202   6.844492   17.66699   4.203212 
+teachers_~00 |       202        202   82.83287   450.6384   21.22824 
+ income_pc00 |       202        202   307.4046   6419.561   80.12216 
+ sh_emp_ag00 |       202        202    .197349   .0180926   .1345089 
+sh_emp_ind00 |       202        202   .2522175   .0075167   .0866991 
+sh_emp_se~00 |       202        202   .5334152    .009572   .0978365 
+
+             |    e(min)     e(max)     e(sum) 
+-------------+---------------------------------
+  settlement |         0          1         20 
+    ln_distk |  2.078144   6.243033   1038.024 
+    latitude |   -25.015   -20.1314  -4564.087 
+   longitude | -51.44758   -44.3855  -9616.563 
+geo_altitude |       .01      11.98   1216.726 
+geo_solo_s~g |         0          1   75.48906 
+geo_solo_s~i |         0          1   23.01984 
+geo_solo_s~o |         0          1   2.472222 
+geo_solo_s~t |         0          1   110.2329 
+    sh_lit72 |  .0482022   .4517723   40.86156 
+sh_childs~72 |  .0265957   .7636054   29.30925 
+ sh_slaves72 |  .0392396   .5306292     31.195 
+sh_foreign72 |         0   .0811454   2.451141 
+       pop72 |      1566      41751    2251782 
+   railway72 |         0          1          5 
+    sh_lit20 |  .1032675   .6993477   59.75153 
+schools_c~20 |         0   1.862776   78.25031 
+teachers_~20 |  .8264462   45.99524    1931.56 
+       pop20 |      2917     577621    4572178 
+sh_foreign20 |  .0004112   .3565511   25.34547 
+sh_forei~t20 |         0          1    88.1818 
+sh_smallh~20 |         0    .972253   135.0003 
+ coffee_ha20 |         0   .2396175   6.374895 
+value_land20 |        12        895      38580 
+   railway20 |         0          1        140 
+ sh_emp_ag20 |  .0712153   .9572108    158.434 
+sh_emp_ind20 |  .0055468   .4946619   18.34484 
+sh_emp_se~20 |  .0346138   .5485845   25.22117 
+    sh_lit40 |  .1432054   .8410579   87.71768 
+schools_c~40 |  1.605781   15.42111   1138.044 
+sh_child_~40 |  .0829238          1   68.29875 
+       pop40 |      3815    1326261    7464884 
+ sh_emp_ag40 |  .0339891   .9536232   152.8531 
+sh_emp_ind40 |   .008756   .6999487   16.92604 
+sh_emp_se~40 |  .0295818   .7727795   31.22083 
+    sh_lit00 |  .7936228   .9298238   179.1765 
+years_sch~00 |  3.532562   7.108724   1118.711 
+sh_child_~00 |  .8635094   .9908253   194.4545 
+schools_c~00 |  2.350538   29.18724   1382.587 
+teachers_~00 |  19.67007   152.6383   16732.24 
+ income_pc00 |    120.42   597.1145   62095.72 
+ sh_emp_ag00 |  .0032176   .5952281    39.8645 
+sh_emp_ind00 |  .0977277   .5452024   50.94793 
+sh_emp_se~00 |  .2540432   .7838235   107.7499 
+
+. "
+aejapp_9_4_5,7,1,"","
+. esttab summstats using ""${repbox_path}/table2.csv"" , repl
+> ace cell(""mean sd min max"")
+(file /home/rstudio/repbox/projects_reg/aejapp_9_4_5/mod/table2.csv not
+    found)
+(output written to /home/rstudio/repbox/projects_reg/aejapp_9_4_5/mod/table2.cs
+> v)
+
+. "
+aejapp_9_4_5,8,1,"","
+. use ""${repbox_path}/DataCode_replication/RochaFerrazSoares_Data1872shape.dta"", clear
+
+. "
+aejapp_9_4_5,9,1,"","
+. eststo summstats_a: estpost summarize  ln_distk geo_lat_72
+>  geo_long_72 geo_altitude  geo_solo_slat sh_lit72 sh_child_school72  sh_forei
+> gn72 sh_slaves72 popdensity72 railway72 publicservants_pc72 legalprofession_p
+> c72 teachers_pc72 sh_emp_ag72 sh_emp_ind72 sh_emp_serv72 if settlement==1
+
+             |  e(count)   e(sum_w)    e(mean)     e(Var)      e(sd) 
+-------------+-------------------------------------------------------
+ ln_distk_72 |        19         19    4.92496   .5315515   .7290758 
+  geo_lat_72 |        19         19  -22.81438   .5726263   .7567207 
+ geo_long_72 |        19         19  -47.13842   2.220374   1.490092 
+geo_altit~72 |        19         19   5.740304   2.339746   1.529623 
+geo_sol~t_72 |        19         19    .528498   .1451191    .380945 
+    sh_lit72 |        19         19   .1850396     .00507   .0712041 
+sh_child_~72 |        19         19   .1523584    .021468   .1465197 
+sh_foreign72 |        19         19   .0231084   .0005816   .0241172 
+ sh_slaves72 |        19         19   .1982559   .0107527    .103695 
+popdensity72 |        19         19   9.722517   56.12975   7.491979 
+   railway72 |        19         19   .1052632   .0994152   .3153018 
+publicser~72 |        19         19   1.152318   1.112233   1.054625 
+legalprof~72 |        19         19   .9488508   .3297118   .5742054 
+teachers_~72 |        19         19   .9554561   .4082976   .6389817 
+ sh_emp_ag72 |        19         19   .6059301   .0091778   .0958007 
+sh_emp_ind72 |        19         19   .1101528   .0015305   .0391217 
+sh_emp_se~72 |        19         19   .2824847   .0072941   .0854057 
+
+             |    e(min)     e(max)     e(sum) 
+-------------+---------------------------------
+ ln_distk_72 |  3.204981    6.00149   93.57423 
+  geo_lat_72 | -24.55089  -21.24178  -433.4733 
+ geo_long_72 | -50.31126    -44.578  -895.6299 
+geo_altit~72 |  .2933333     7.5915   109.0658 
+geo_sol~t_72 |         0          1   10.04146 
+    sh_lit72 |  .0576299   .3283042   3.515752 
+sh_child_~72 |  .0355487   .6869806   2.894809 
+sh_foreign72 |  .0005403   .0811454   .4390602 
+ sh_slaves72 |  .0712419   .4487564   3.766863 
+popdensity72 |  .2045552   26.04625   184.7278 
+   railway72 |         0          1          2 
+publicser~72 |         0   3.435143   21.89405 
+legalprof~72 |         0   2.116776   18.02817 
+teachers_~72 |         0   2.898366   18.15367 
+ sh_emp_ag72 |   .413205   .7735181   11.51267 
+sh_emp_ind72 |  .0611732   .1927002   2.092903 
+sh_emp_se~72 |  .1574757   .4259569   5.367209 
+
+. "
+aejapp_9_4_5,10,1,"","
+. eststo summstats_b: estpost summarize  ln_distk geo_lat_72
+>  geo_long_72 geo_altitude  geo_solo_slat sh_lit72 sh_child_school72  sh_forei
+> gn72 sh_slaves72 popdensity72 railway72 publicservants_pc72 legalprofession_p
+> c72 teachers_pc72 sh_emp_ag72 sh_emp_ind72 sh_emp_serv72 if settlement==0
+
+             |  e(count)   e(sum_w)    e(mean)     e(Var)      e(sd) 
+-------------+-------------------------------------------------------
+ ln_distk_72 |        69         69   4.872408   .3332515   .5772794 
+  geo_lat_72 |        69         69  -22.93998   .8083022   .8990563 
+ geo_long_72 |        69         69  -46.83946   1.441329   1.200554 
+geo_altit~72 |        69         69   5.957273   6.610779   2.571144 
+geo_sol~t_72 |        69         69   .4371194   .1939031   .4403443 
+    sh_lit72 |        69         69   .1657397   .0091516   .0956638 
+sh_child_~72 |        69         69   .1646683   .0181319   .1346546 
+sh_foreign72 |        69         69   .0132855   .0001903    .013794 
+ sh_slaves72 |        69         69   .1734796   .0099797   .0998984 
+popdensity72 |        69         69    9.47386   47.31567   6.878639 
+   railway72 |        69         69   .0144928   .0144928   .1203859 
+publicser~72 |        69         69   1.014931   1.233564   1.110659 
+legalprof~72 |        69         69   .8616006   .8866607   .9416266 
+teachers_~72 |        69         69   1.028479   .5154145   .7179237 
+ sh_emp_ag72 |        69         69   .5916634   .0135691   .1164863 
+sh_emp_ind72 |        69         69   .0981068   .0026894   .0518591 
+sh_emp_se~72 |        69         69     .30932     .01198   .1094533 
+
+             |    e(min)     e(max)     e(sum) 
+-------------+---------------------------------
+ ln_distk_72 |    3.3997   6.142569   336.1961 
+  geo_lat_72 |   -25.015  -20.36144  -1582.858 
+ geo_long_72 | -50.07807   -44.3855  -3231.923 
+geo_altit~72 |       .01      11.98   411.0518 
+geo_sol~t_72 |         0          1   30.16124 
+    sh_lit72 |  .0482022   .4517723   11.43604 
+sh_child_~72 |  .0265957   .7636054   11.36211 
+sh_foreign72 |         0   .0623478   .9166985 
+ sh_slaves72 |  .0392396   .5306292   11.97009 
+popdensity72 |  .0889908   36.53896   653.6964 
+   railway72 |         0          1          1 
+publicser~72 |         0   4.668931   70.03025 
+legalprof~72 |         0   5.243764   59.45044 
+teachers_~72 |         0   3.831418   70.96507 
+ sh_emp_ag72 |   .350609   .9077297   40.82478 
+sh_emp_ind72 |  .0201979   .2443524   6.769366 
+sh_emp_se~72 |   .058276   .5688212   21.34308 
+
+. "

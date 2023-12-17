@@ -1,0 +1,6 @@
+artid,file_path,file_name,file_type,mb,mb_org,mb_mod,mtime_org,mtime_mod,in_org,in_mod
+aejapp_9_4_5,DataCode_replication/README.pdf,README.pdf,pdf,0.070508,0.070508,0.070508,2023-11-05 12:27:19,2023-11-05 12:27:19,TRUE,TRUE
+aejapp_9_4_5,DataCode_replication/Rocha_Ferraz_Soares_Tables.do,Rocha_Ferraz_Soares_Tables.do,do,0.011859,0.011859,0.011859,2023-11-05 12:27:19,2023-11-05 12:27:19,TRUE,TRUE
+aejapp_9_4_5,DataCode_replication/RochaFerrazSoares_Data1872_1940.dta,RochaFerrazSoares_Data1872_1940.dta,dta,0.023989,0.023989,0.023989,2023-11-05 12:27:19,2023-11-05 12:27:19,TRUE,TRUE
+aejapp_9_4_5,DataCode_replication/RochaFerrazSoares_Data1872shape.dta,RochaFerrazSoares_Data1872shape.dta,dta,0.022767,0.022767,0.022767,2023-11-05 12:27:19,2023-11-05 12:27:19,TRUE,TRUE
+aejapp_9_4_5,DataCode_replication/RochaFerrazSoares_Data1920shape.dta,RochaFerrazSoares_Data1920shape.dta,dta,0.115283,0.115283,0.115283,2023-11-05 12:27:19,2023-11-05 12:27:19,TRUE,TRUE

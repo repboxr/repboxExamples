@@ -1,0 +1,11 @@
+artid,step,variant,cterm,ia_cterm,basevar,role,var_org_type,var_reg_type,ia_reg_type,absorbed_fe,main_pos,ia_pos,ia_num,ia_source_expr,var_source_expr,transform,transform_par
+aejapp_9_4_5,4,sb,settlement,settlement,settlement,exo,dummy,dummy,dummies,FALSE,2,1,1,settlement,settlement,"",""
+aejapp_9_4_5,4,sb,ln_distk,ln_distk,ln_distk,dep,,,numeric,FALSE,1,1,1,ln_distk,ln_distk,"",""
+aejapp_9_4_5,5,sb,settlement,settlement,settlement,exo,dummy,dummy,dummies,FALSE,2,1,1,settlement,settlement,"",""
+aejapp_9_4_5,5,sb,geo_lat_72,geo_lat_72,geo_lat_72,dep,numeric,numeric,numeric,FALSE,1,1,1,geo_lat_72,geo_lat_72,"",""
+aejapp_9_4_5,6,sb,settlement,settlement,settlement,exo,dummy,dummy,dummies,FALSE,2,1,1,settlement,settlement,"",""
+aejapp_9_4_5,6,sb,geo_long_72,geo_long_72,geo_long_72,dep,numeric,numeric,numeric,FALSE,1,1,1,geo_long_72,geo_long_72,"",""
+aejapp_9_4_5,7,sb,settlement,settlement,settlement,exo,dummy,dummy,dummies,FALSE,2,1,1,settlement,settlement,"",""
+aejapp_9_4_5,7,sb,geo_altitude,geo_altitude,geo_altitude,dep,,,numeric,FALSE,1,1,1,geo_altitude,geo_altitude,"",""
+aejapp_9_4_5,8,sb,settlement,settlement,settlement,exo,dummy,dummy,dummies,FALSE,2,1,1,settlement,settlement,"",""
+aejapp_9_4_5,8,sb,geo_solo_slat,geo_solo_slat,geo_solo_slat,dep,,,numeric,FALSE,1,1,1,geo_solo_slat,geo_solo_slat,"",""

@@ -1,0 +1,11 @@
+artid,tabid,tab_type,ind_type,ind_keyword,phrase,ind_val,ind_counts
+aejapp_9_4_5,10,causal,keyword_title,effect,effect,1,1
+aejapp_9_4_5,10,descr,keyword_notes,characteristics,characteristics,1,1
+aejapp_9_4_5,10,descr,keyword_notes,share of ,share of ,1,6
+aejapp_9_4_5,10,descr,keyword_table,share of ,share of ,1,6
+aejapp_9_4_5,10,reg,keyword_notes,clustered,clustered,1,1
+aejapp_9_4_5,10,reg,keyword_notes,depvar, dependent variable,1,2
+aejapp_9_4_5,2,descr,keyword_ref,characteristics,characteristics,1,1
+aejapp_9_4_5,2,descr,keyword_ref,descriptive,descriptive,1,1
+aejapp_9_4_5,2,descr,keyword_ref,summary,summary,1,1
+aejapp_9_4_5,2,descr,keyword_ref,summary statistics,summary statistics,1,1

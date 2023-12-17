@@ -1,0 +1,11 @@
+artid,step,variant,scalar_name,scalar_val
+aejapp_9_4_5,4,sb,rank,2
+aejapp_9_4_5,4,sb,ll_0,-80.7260784277758
+aejapp_9_4_5,4,sb,ll,-80.6699448351828
+aejapp_9_4_5,4,sb,r2_a,-0.0103381319486553
+aejapp_9_4_5,4,sb,rss,32.2290295501259
+aejapp_9_4_5,4,sb,mss,0.0411428572067436
+aejapp_9_4_5,4,sb,rmse,0.612173306800945
+aejapp_9_4_5,4,sb,r2,0.001274950027766
+aejapp_9_4_5,4,sb,F,0.0863276583788847
+aejapp_9_4_5,4,sb,df_r,86

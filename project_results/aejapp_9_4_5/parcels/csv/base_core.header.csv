@@ -1,0 +1,2 @@
+artid,metaid,main_metaid,version,dap_version,se_parser_version,r_version,stata_version,timestamp,total_runtime,num_studied,num_problem,num_large_deviation,os_type,system_info,problem,comment
+aejapp_9_4_5,base,base,0,0,0,4.1.0,17,2023-11-05T18:44:42.804498Z,20.8752574920654,69,1,31,unix,"","",""

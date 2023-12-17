@@ -1,0 +1,11 @@
+artid,tabid,cellid,row,col,colspan,type,text,num_str,num,num_deci,stars_str,paren_type,panel_num,num_row_block
+aejapp_9_4_5,2,0,1,1,5,text,Variables by Census Years,,,,,,1,0
+aejapp_9_4_5,2,0,3,1,1,text,Variables,,,,,,1,0
+aejapp_9_4_5,2,0,3,2,1,text,Mean,,,,,,1,0
+aejapp_9_4_5,2,0,3,3,1,text,SD,,,,,,1,0
+aejapp_9_4_5,2,0,3,4,1,text,Min,,,,,,1,0
+aejapp_9_4_5,2,0,3,5,1,text,Max,,,,,,1,0
+aejapp_9_4_5,2,0,4,1,5,text,Panel A. Geography,,,,,,1,0
+aejapp_9_4_5,2,0,5,1,1,text,Settlement,,,,,,1,1
+aejapp_9_4_5,2,1,5,2,,num,0.10,0.10,0.1,2,"","",1,1
+aejapp_9_4_5,2,2,5,3,,num,0.30,0.30,0.3,2,"","",1,1

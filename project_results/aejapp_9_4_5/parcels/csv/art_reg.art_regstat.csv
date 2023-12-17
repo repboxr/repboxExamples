@@ -1,0 +1,11 @@
+artid,regid,cellid,stat_name,num,num_deci
+aejapp_9_4_5,1,305,nobs,202,0
+aejapp_9_4_5,2,306,nobs,202,0
+aejapp_9_4_5,3,307,nobs,202,0
+aejapp_9_4_5,4,308,nobs,202,0
+aejapp_9_4_5,5,309,nobs,172,0
+aejapp_9_4_5,1,310,adj_r2,0.095,3
+aejapp_9_4_5,2,311,adj_r2,0.31,3
+aejapp_9_4_5,3,312,adj_r2,0.382,3
+aejapp_9_4_5,4,313,adj_r2,0.598,3
+aejapp_9_4_5,5,314,adj_r2,0.26,3

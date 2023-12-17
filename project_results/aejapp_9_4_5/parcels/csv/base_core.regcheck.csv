@@ -1,0 +1,11 @@
+artid,step,variant,did_run,problem,deviation,tolerable_deviation,comment
+aejapp_9_4_5,4,sb,TRUE,"",0,1e-12,""
+aejapp_9_4_5,5,sb,TRUE,,0,1e-12,""
+aejapp_9_4_5,6,sb,TRUE,,0,1e-12,""
+aejapp_9_4_5,7,sb,TRUE,,0,1e-12,""
+aejapp_9_4_5,8,sb,TRUE,,0,1e-12,""
+aejapp_9_4_5,9,sb,TRUE,,0,1e-12,""
+aejapp_9_4_5,10,sb,TRUE,,0,1e-12,""
+aejapp_9_4_5,11,sb,TRUE,,0,1e-12,""
+aejapp_9_4_5,12,sb,TRUE,,0,1e-12,""
+aejapp_9_4_5,13,sb,TRUE,,0,1e-12,""

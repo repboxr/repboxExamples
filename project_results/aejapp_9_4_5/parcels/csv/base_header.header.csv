@@ -1,0 +1,2 @@
+timestamp,num_studied,num_problem,num_large_deviation,os_type,se_parser_version,r_version,stata_version,system_info,total_runtime,comment,problem,metaid,main_metaid,artid,version,dap_version
+2023-11-05T18:44:42.804498Z,69,1,31,unix,0,4.1.0,17,"",20.8752574920654,"","",base,base,aejapp_9_4_5,0,0

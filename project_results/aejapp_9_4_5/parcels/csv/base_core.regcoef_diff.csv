@@ -1,0 +1,11 @@
+artid,step,variant1,variant2,compare_what,identical,identical_share,within_1pc_share,within_1pm_share,max_rel_diff,max_deviation,ref_level_differ,problem
+aejapp_9_4_5,4,so,sb,all,TRUE,1,1,1,0,0,FALSE,""
+aejapp_9_4_5,5,so,sb,all,TRUE,1,1,1,0,0,FALSE,""
+aejapp_9_4_5,6,so,sb,all,TRUE,1,1,1,0,0,FALSE,""
+aejapp_9_4_5,7,so,sb,all,TRUE,1,1,1,0,0,FALSE,""
+aejapp_9_4_5,8,so,sb,all,TRUE,1,1,1,0,0,FALSE,""
+aejapp_9_4_5,9,so,sb,all,TRUE,1,1,1,0,0,FALSE,""
+aejapp_9_4_5,10,so,sb,all,TRUE,1,1,1,0,0,FALSE,""
+aejapp_9_4_5,11,so,sb,all,TRUE,1,1,1,0,0,FALSE,""
+aejapp_9_4_5,12,so,sb,all,TRUE,1,1,1,0,0,FALSE,""
+aejapp_9_4_5,13,so,sb,all,TRUE,1,1,1,0,0,FALSE,""

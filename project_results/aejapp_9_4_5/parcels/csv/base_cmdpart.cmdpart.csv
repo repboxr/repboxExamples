@@ -1,0 +1,11 @@
+artid,step,parent,part,counter,content,tag
+aejapp_9_4_5,4,"",main,0,"{{pre1}} {{cmd}} {{varlist}} ,{{opt_str1}}",""
+aejapp_9_4_5,4,main,pre,1,eststo:,""
+aejapp_9_4_5,4,main,cmd,0,reg,reg
+aejapp_9_4_5,4,main,varlist,0,{{v1}} {{v2}},""
+aejapp_9_4_5,4,varlist,v,1,ln_distk,depvar
+aejapp_9_4_5,4,varlist,v,2,settlement,exo
+aejapp_9_4_5,4,main,opt_str,1,"{{opt,1}}",""
+aejapp_9_4_5,4,opt_str,opt,1,rob,""
+aejapp_9_4_5,5,"",main,0,"{{pre1}} {{cmd}} {{varlist}} ,{{opt_str1}}",""
+aejapp_9_4_5,5,main,pre,1,eststo:,""

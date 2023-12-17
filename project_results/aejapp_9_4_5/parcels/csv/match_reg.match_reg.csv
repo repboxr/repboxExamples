@@ -1,0 +1,11 @@
+artid,variant,step,runid,regid,paren_type,match_score,coef_match_score,stat_match_score,art_ncoef,code_ncoef,art_nstat,code_nfoundstat
+aejapp_9_4_5,sb,72,112,49,se,1,1,,7,23,,
+aejapp_9_4_5,sb,73,113,50,se,1,1,,7,23,,
+aejapp_9_4_5,sb,74,114,51,se,1,1,,7,23,,
+aejapp_9_4_5,sb,75,115,52,se,1,1,,7,23,,
+aejapp_9_4_5,sb,22,41,1,se,1,1,1,1,2,2,2
+aejapp_9_4_5,sb,72,112,1,se,0.55,0.1,1,1,23,2,1
+aejapp_9_4_5,sb,75,115,1,se,0.55,0.1,1,1,23,2,1
+aejapp_9_4_5,sb,23,42,2,se,1,1,1,1,10,2,2
+aejapp_9_4_5,sb,52,86,2,se,0.55,0.1,1,1,17,2,1
+aejapp_9_4_5,sb,63,99,2,se,0.55,0.1,1,1,17,2,1

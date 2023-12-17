@@ -1,0 +1,11 @@
+artid,step,variant,string_name,string_val
+aejapp_9_4_5,4,sb,title,Linear regression
+aejapp_9_4_5,4,sb,marginsok,XB default
+aejapp_9_4_5,4,sb,vce,robust
+aejapp_9_4_5,4,sb,properties,b V
+aejapp_9_4_5,4,sb,predict,regres_p
+aejapp_9_4_5,4,sb,model,ols
+aejapp_9_4_5,4,sb,estat_cmd,regress_estat
+aejapp_9_4_5,4,sb,vcetype,Robust
+aejapp_9_4_5,4,sb,clustvar,
+aejapp_9_4_5,4,sb,marginsnotok,

@@ -1,0 +1,11 @@
+artid,variant,runid,regid,stat_name,found,matched
+aejapp_9_4_5,sb,41,1,nobs,TRUE,TRUE
+aejapp_9_4_5,sb,112,1,nobs,TRUE,TRUE
+aejapp_9_4_5,sb,115,1,nobs,TRUE,TRUE
+aejapp_9_4_5,sb,42,2,nobs,TRUE,TRUE
+aejapp_9_4_5,sb,86,2,nobs,TRUE,TRUE
+aejapp_9_4_5,sb,99,2,nobs,TRUE,TRUE
+aejapp_9_4_5,sb,43,3,nobs,TRUE,TRUE
+aejapp_9_4_5,sb,112,3,nobs,TRUE,TRUE
+aejapp_9_4_5,sb,23,4,nobs,FALSE,FALSE
+aejapp_9_4_5,sb,44,4,nobs,TRUE,TRUE

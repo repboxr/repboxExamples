@@ -1,0 +1,11 @@
+artid,step,runid,variant,lang,cmdline,cmd,ncoef,nobs,nobs_org,timevar,panelvar,tdelta,iv_code,se_category,se_type,se_args,r2
+aejapp_9_4_5,4,15,sb,stata,"eststo: reg ln_distk settlement , rob",reg,2,88,88,"","",,FALSE,robust,hc1,"",0.001274950027766
+aejapp_9_4_5,5,16,sb,stata,"eststo: reg geo_lat_72 settlement , rob",reg,2,88,88,"","",,FALSE,robust,hc1,"",0.0035872000531437
+aejapp_9_4_5,6,17,sb,stata,"eststo: reg geo_long_72 settlement , rob",reg,2,88,88,"","",,FALSE,robust,hc1,"",0.0095576436301211
+aejapp_9_4_5,7,18,sb,stata,"eststo: reg geo_altitude settlement , rob",reg,2,88,88,"","",,FALSE,robust,hc1,"",0.0014244372810572
+aejapp_9_4_5,8,19,sb,stata,"eststo: reg geo_solo_slat settlement , rob",reg,2,88,88,"","",,FALSE,robust,hc1,"",0.0078129066239675
+aejapp_9_4_5,9,20,sb,stata,"eststo: reg sh_lit72 settlement , rob",reg,2,88,88,"","",,FALSE,robust,hc1,"",0.0077166893755434
+aejapp_9_4_5,10,21,sb,stata,"eststo: reg sh_child_school72 settlement , rob",reg,2,88,88,"","",,FALSE,robust,hc1,"",0.0013921116869249
+aejapp_9_4_5,11,22,sb,stata,"eststo: reg sh_foreign72 settlement , rob",reg,2,88,88,"","",,FALSE,robust,hc1,"",0.0578564775923578
+aejapp_9_4_5,12,23,sb,stata,"eststo: reg sh_slaves72 settlement , rob",reg,2,88,88,"","",,FALSE,robust,hc1,"",0.0103768095645592
+aejapp_9_4_5,13,24,sb,stata,"eststo: reg popdensity72 settlement , rob",reg,2,88,88,"","",,FALSE,robust,hc1,"",0.0002178270392038

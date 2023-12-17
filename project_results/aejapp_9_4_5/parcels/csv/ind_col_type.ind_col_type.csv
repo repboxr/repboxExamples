@@ -1,0 +1,11 @@
+artid,tabid,col,tab_type,ind_type,ind_keyword,phrase,ind_val,ind_counts
+aejapp_9_4_5,3,1,descr,keyword_ref,characteristics,characteristics,1,1
+aejapp_9_4_5,3,1,reg,keyword_ref,estimate,estimate,0.5,1
+aejapp_9_4_5,3,2,descr,keyword_ref,characteristics,characteristics,1,1
+aejapp_9_4_5,3,2,reg,keyword_ref,estimate,estimate,0.5,1
+aejapp_9_4_5,3,3,descr,keyword_ref,characteristics,characteristics,1,2
+aejapp_9_4_5,3,3,reg,keyword_ref,estimate,estimate,0.5,1
+aejapp_9_4_5,3,3,reg,keyword_ref,regression,regress,1,1
+aejapp_9_4_5,4,1,causal,keyword_ref,effect,effect,1,1
+aejapp_9_4_5,4,2,causal,keyword_ref,effect,effect,1,1
+aejapp_9_4_5,4,3,causal,keyword_ref,effect,effect,1,1

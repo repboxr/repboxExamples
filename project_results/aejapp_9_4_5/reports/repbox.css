@@ -1,0 +1,136 @@
+div .nav>li>a{
+    padding: 2px 5px;
+}
+
+#do-col-div .tab-content {
+  border-top: 1px solid #eee;
+}
+
+.code2tab {
+  color: #004400;
+  /*font-size: 13;
+  font-family: "Comic Sans MS", "Comic Sans", cursive*/
+}
+
+.tabnum:hover {
+  /*font-weight: bold;*/
+  cursor: pointer;
+}
+
+.code-line-td {
+  font-family: Consolas, Monospace;
+  font-size: 13px;
+  padding-right: 1em;
+  color: #888888;
+  text-align: right;
+  /*padding-top: 2px;*/
+}
+
+.small-tab-ul {
+  font-size: 13px;
+}
+.small-tab-ul>li>a {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left:5px;
+  padding-right: 5px;
+}
+
+.reg-info {
+  white-space: normal;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+}
+
+.code-tab td {
+  vertical-align: text-top;
+  overflow-x: hidden;
+}
+
+.logtxt-pre {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.logtxt-code {
+
+}
+
+.err-line.code-highlight {
+  background: #aaaa44;
+}
+
+.noerr-line.code-highlight {
+  background: #ffff88;
+}
+
+.error-comment {
+  color: #880000;
+  font-family: "Comic Sans MS", "Comic Sans", cursive
+}
+
+.table-comment {
+  color: #007700;
+  font-family: "Comic Sans MS", "Comic Sans", cursive
+}
+.table-comment a {
+  color: #007700;
+  font-family: "Comic Sans MS", "Comic Sans", cursive
+}
+
+.table-mini {
+  font-size: 13px;
+  font-family: "Trebuchet MS","Arial Narrow","Tahoma","Helvetica";
+  width: auto;
+  white-space: nowrap;
+
+}
+
+
+.table-mini>tbody>tr>td {
+  padding-left: 3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-right: 3px;
+  white-space: nowrap;
+  border: none;
+}
+
+
+.reg-cmd {
+  color: #000099;
+}
+
+
+.art-source-tab-div pre {
+  /* Allows to use scrollbar at bottom of pane. Just
+  setting overflow-x visible does not work as it will be interpreted
+  as auto see https://stackoverflow.com/questions/6421966/css-overflow-x-visible-and-overflow-y-hidden-causing-scrollbar-issue*/
+  overflow: visible;
+  /*overflow-x: visible !important;*/
+  border: none;
+}
+
+.do-pre {
+  background: #ffffff;
+  padding: 0;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.err-line {
+  background: #cdcdcd;
+  padding: 2px 4px;
+}
+
+.norun-line {
+  background: #eee;
+}
+
+.noerr-line {
+  background: #ffffff;
+}
+
