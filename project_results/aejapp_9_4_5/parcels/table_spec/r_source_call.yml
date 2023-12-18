@@ -1,0 +1,13 @@
+name: r_source_call
+
+descr: |
+  Parsed info about sourcing of R scripts from other R scripts
+
+fields:
+  artid:
+
+  caller_script_num:
+    type: int
+
+  sourced_script_num:
+    type: int

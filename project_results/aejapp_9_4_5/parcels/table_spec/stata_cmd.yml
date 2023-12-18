@@ -1,0 +1,58 @@
+name: stata_cmd
+
+descr: |
+  Parsed info about all stata commands. Uses information from the tab field
+  in repboxStata.
+
+unique_index:
+  main_index: [artid, file_path]
+
+fields:
+  artid:
+
+  file_path:
+
+  line:
+    descr: Line in the canonical version of the script.
+    type: int
+
+  orgline:
+    descr: Line in the original version of the script.
+
+  cmd:
+    descr: Stata command
+
+  cmdline:
+    descr: The full command line
+
+  prefix_cmd1:
+    descr: |
+      (Optional) A prefix command before a colon like capture:
+
+  prefix_cmd2:
+    descr: |
+      (Optional) A prefix command before a colon, like "capture: xi:"
+
+  num_runs:
+    descr: |
+      How often was a command line run logged in our reproduction?
+      Note that there is an upper limit on the number of logged runs per command.
+      Otherwise a loop that is called millions of time could make the log explode.
+    type: int
+
+  num_err_runs:
+    descr: How many of the logged runs had an error?
+    type: int
+
+  in_program:
+    descr: Is the code line inside a Stata program?
+    type: bool
+
+  in_loop:
+    descr: Is the code line inside a loop?
+    type: bool
+
+  is_reg:
+    descr: Is the cmd classified as a regression command?
+    type: bool
+

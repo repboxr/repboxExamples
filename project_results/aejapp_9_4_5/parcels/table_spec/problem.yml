@@ -1,0 +1,19 @@
+name: problem
+
+descr: >
+  Problems like errors when trying to run or translate a regression
+
+fields:
+  artid:
+
+  step:
+    type: int
+
+  variant:
+    descr: Is optional. If missing the problem pertains to all variants.
+
+  problem_type:
+    descr: Short string specifying the problem.
+
+  problem_descr:
+    descr: Longer description of the problem

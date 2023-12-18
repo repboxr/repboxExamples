@@ -1,0 +1,28 @@
+name: regscalar
+
+descr: |
+  Additional numeric regression statistics like those provided by broom::glance.
+  Will nonly contain numeric and boolean values.
+  Strings will be stored in reg_strings.
+
+unique_index:
+  main_index: [artid, step, variant, scalar_name]
+
+index:
+  index2: stat_name
+
+fields:
+  artid:
+
+  step:
+    type: int
+
+  variant:
+
+  scalar_name:
+    descr: |
+      Name of the regression statistics. Will typically directly taken
+      from the Stata
+
+  scalar_val:
+    type: num

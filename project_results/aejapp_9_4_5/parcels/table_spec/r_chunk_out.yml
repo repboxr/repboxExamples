@@ -1,0 +1,28 @@
+name: r_chunk_out
+
+descr: |
+  The captured outputs of R chunks after evaluating
+
+fields:
+  script_num:
+    type: int
+
+  chunkid:
+    type: int
+    descr: Integer for the expression in the parse data.
+
+  out_type:
+
+  out_text:
+
+  out_class:
+
+  is_html:
+    type: bool
+
+  is_visible:
+    type: bool
+
+  obj_file:
+
+  img_file:

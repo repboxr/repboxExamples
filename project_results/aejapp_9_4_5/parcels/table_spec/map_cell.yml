@@ -1,0 +1,65 @@
+name: map_cell
+
+descr: |
+  Descripe the chosen map between table cells in an article
+  and code chunks.
+
+fields:
+  tabid:
+
+  num:
+    type: num
+
+  regid:
+    type: int
+
+  cmd:
+
+  # The fields above will be removed once everything is nicely debugged
+
+  mapid:
+    type: int
+    descr: In principal, we might consider multiple maps.
+
+  cellid:
+    type: int
+
+  block:
+    type: int
+
+  runid:
+    type: int
+
+  variant:
+
+  deci_dist:
+    type: num
+
+  num_type:
+    descr: |
+      What sort of number does the cell display in context of the map?
+    type: int
+    val_descr:
+      0: No special characterization
+      1: Regression coefficient
+      2: Regression parenthesis
+      3: Regression se
+      4: Regresson t
+      5: Regression p
+      10: General regression stat
+      11: Regression nobs
+      12: Regression r2
+
+  match_type:
+    type: int
+    val_descr:
+      0: No match at all
+      1: Best regression, exact
+      2: Best regression, approx
+      3: Not-best regression exact
+      4: Not-best regression approx
+      5: Best noreg match, exact
+      6: Best noreg match, approx
+      7: Noreg match but not best in block, exact
+
+

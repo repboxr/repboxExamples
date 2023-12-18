@@ -1,0 +1,24 @@
+name: stata_cmd_tab_fig_ref
+
+descr: |
+  References to tables or figures in Stata scripts (comments or file name)
+
+fields:
+  artid:
+
+  file_path:
+
+  line:
+    descr: Line in the canonical version of the script.
+    type: int
+
+  ref_type:
+    descr: |
+      "tab" or "fig"
+
+  ref_id:
+    descr: Table or Figure ID
+
+  ref_source:
+    descr: |
+      "co" for comment "fi" for file name

@@ -1,0 +1,19 @@
+name: r_install_pkg
+
+descr: |
+  Info about package installation code in R scripts
+
+fields:
+  artid:
+
+  script_num:
+    type: int
+
+  pkg:
+
+  cmd:
+
+  code:
+
+  uses_variable:
+    type: bool

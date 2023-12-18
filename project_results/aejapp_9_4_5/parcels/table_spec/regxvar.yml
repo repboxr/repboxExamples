@@ -1,0 +1,35 @@
+name: regxvar
+
+descr: >
+  Contains information about the expansion of interaction terms and factor levels for
+  all explanatory variables in a regression.
+
+  This table augments the regvar table. While regvar would allow to translate regression
+  commands to R there is one problem: how can we drop in a translation exactly the
+  same factor levels as in the original regression run.
+
+  Here regxvar helps as we also store for each expanded term whether it is was found
+  or dropped in regcoef. For a translation, we can then build a regression formula
+  using the non-dropped expanded terms.
+
+fields:
+  artid:
+    descr: Project name. Typically ejd id of the article like aer_101_1_5
+
+  step:
+    descr: Analysis step in the DAP of the project
+    type: int
+
+  ia_cterm:
+    descr: Canonical name of interaction term this variable is a part of. If it is not part of an ia_term,
+           this is simply cvar.
+
+  cterm:
+    descr: Canoncial name of the regression variable. Does not include value for factors, e.g. 'color'
+
+  role:
+    descr: Role in the regression. Here either exo, endo or instr
+
+  in_regcoef:
+    descr: Does the cterm have a non-na coefficient in the base run regcoef?
+    type: bool

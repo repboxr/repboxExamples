@@ -1,0 +1,29 @@
+name: cmdpart_tag
+
+descr: |
+  Additional tags that can be added to a cmdpart.
+  The cmdpart table has just a single tag field. In case
+  more tags are generated, they can be stored in this table.
+
+unique_index:
+  main_index: [artid, step, part, counter, tag]
+
+index:
+  index2: [tag]
+
+fields:
+  artid:
+
+  step:
+    type: int
+
+  part:
+
+  counter:
+    type: int
+
+  tag:
+    descr: |
+      Additional tag for the placeholder that may differ from part
+      part may more often contain information about the position in the cmdline
+      while tag may add information about the function inside the regression

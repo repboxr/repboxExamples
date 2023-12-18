@@ -1,0 +1,22 @@
+name: stata_run_log
+
+descr: |
+  The Stata output of run commands. We split it from stata_run_cmd, because sometimes
+  the output text can be very large.
+
+unique_index:
+  main_index: [artid, runind]
+
+fields:
+  artid:
+
+  runid:
+    type: int
+
+  script_num:
+    type: int
+
+  errmsg:
+
+  logtxt:
+    descr: The command's output text shown in the log file

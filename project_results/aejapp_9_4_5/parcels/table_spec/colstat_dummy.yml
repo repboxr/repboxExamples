@@ -1,0 +1,41 @@
+name: colstat_dummy
+
+descr: >
+  Contains information about factor variables used in the regression.
+
+  Can also treat information about integer variables treated as factors.
+
+fields:
+  artid:
+
+  step:
+    type: int
+
+  variant:
+
+  cterm:
+    descr: Canoncial name of the regression term. For factors includes the value, e.g. 'color=blue'.
+
+  na_num:
+    descr: Number of NA values in the original data set before NA rows are dropped in regression
+    type: int
+
+  ones_num_org:
+    descr: Number of observations equal to 1 in original data set
+    type: int
+
+  ones_num:
+    descr: Number of observations equal to 1 in regression data set
+    type: int
+
+  mean_org:
+    descr: Number of observations equal to 1 in regression data set
+    type: num
+
+  mean:
+    descr: Number of observations equal to 1 in regression data set
+    type: num
+
+  sd:
+    descr: Number of observations equal to 1 in regression data set
+    type: num

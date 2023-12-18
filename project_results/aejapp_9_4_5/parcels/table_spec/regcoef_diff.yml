@@ -1,0 +1,69 @@
+name: regcoef_diff
+
+descr: |
+  Summary information on whether regression coefficients and se
+  from regcoef differ between two variants.
+  E.g. if we implement the same regression in R and Stata, we would like
+  the estimated coefficients to be identical or given rounding errors
+  to be at least close to each other.
+
+  The information is in R using the function "regcoef_diff". Comparison
+  on level of each coefficient can be generated with the R function
+  coef_diff_table but we don't store this information in the data base.
+
+unique_index:
+  main_index: [artid, step, variant1, variant2]
+
+fields:
+  artid:
+
+  step:
+    type: int
+
+  variant1:
+    descr: The first variant
+
+  variant2:
+    descr: The second variant.
+
+  compare_what:
+    decr: What do we compare?
+    values: [all, coef, se]
+
+  identical:
+    descr: Are values for all coefficients exactly identical?
+    type: bool
+
+  identical_share:
+    descr: Share of coefficients that are identical
+    type: num
+
+  within_1pc_share:
+    descr: Share of values that have a relative difference below 1pc 0.001. NA values will be ignored.
+    type: num
+
+  within_1pm_share:
+    describe: Share of values that have a relative difference below 1 per mille 0.001. NA values will be ignored.
+    type: num
+
+  max_rel_diff:
+    descr: Maximum relative difference abs(x1-x2)/mean(x1+x2)
+    type: num
+
+  max_deviation:
+    descr: We define as the deviation the minimum of the absolute diference abs(x1-x2)
+              and the relative difference. For coefficients close to zero the relative difference
+              may be large due to rounding errors, but that should not be a big problem
+              if the absolute difference is quite small.
+    type: num
+
+  ref_level_differ:
+    descr: Are different levels for some variables shown / dropped => Also means ref_level may differ
+    type: bool
+
+  problem:
+    descr: >
+      An optional text that describes some problem in this comparison.
+      One example is "infeasible_filter_condition" if a Stata if condition cannot
+      be properly translated to R and we would thus not expect a correct replication
+      of the regressionn results.

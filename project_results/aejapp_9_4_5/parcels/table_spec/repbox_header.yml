@@ -1,0 +1,60 @@
+name: repbox_header
+
+descr: >
+  Basic information about the main repbox run
+
+fields:
+  artid:
+
+  repbox_version:
+    type: num
+    descr: |
+      The main repbox version number.
+
+  r_version:
+    descr: The R version
+
+  stata_version:
+    type: num
+    descr: The Stata version. Can be NA if no Stata used.
+
+  supp_citation:
+    descr:
+
+  supp_url:
+    descr: URL of supplement
+
+  supp_doi:
+    descr: doi of supplement
+
+  license_code:
+    descr: Short text of license file like CC-BY 4.0
+
+  license_data:
+    descr: Short text of license file like CC-BY 4.0
+
+  timestamp:
+    descr: When was repbox run?
+
+  total_runtime:
+    descr: Total runtime of the main repbox run in seconds.
+
+  max_cmd_log:
+    descr: |
+      How many times will at most log created if the same command line
+      inside a loop or programm will be called multiple times?
+    type: int
+
+  os_type:
+    descr: String describing the type of operation system, like "windows" or "unix"
+
+  system_info:
+    descr: An optional string describing the hardware
+
+  problem:
+    descr: |
+      A string that may note a general problem.
+
+  comment:
+    descr: Optional free text comment for this study run. Don't make very long comments.
+

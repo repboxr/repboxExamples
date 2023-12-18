@@ -1,0 +1,35 @@
+# Fields with one entry per regression
+
+name: match_regstat
+
+descr: |
+  Match tables store information about all (reasonable) matches.
+  A map specifies the selected (best) matches.
+  Here we store how regression statistic shown in an article table can be
+  matched to a corresponding statistic extracted from the code run.
+index:
+  main_index: [artid, variant, step, regid, stat_name]
+
+fields:
+  artid:
+    descr: ID of the article that is analyzed.
+
+  variant:
+
+  runid:
+    type: int
+
+  regid:
+    type: int
+    descr: ID of reg in article
+
+  stat_name:
+    descr: Name of the statistic like nobs or r2
+
+  found:
+    descr: Was the statistic found in the code regression stats
+    type: bool
+
+  matched:
+    descr: Given that the statistic was found. Could it be matched?
+    type: bool

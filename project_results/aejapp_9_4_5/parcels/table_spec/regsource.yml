@@ -1,0 +1,39 @@
+name: regsource
+
+maps_to: reg
+
+descr: |
+  Additional information about the source file of a regression. We don't have different
+  variants since there is only one source.
+
+unique_index:
+  main_index: [artid, step]
+
+fields:
+  artid:
+
+  step:
+
+
+  script_type:
+    descr: File extension of the script in which the original regression command was performed
+    values: [do, r]
+
+  script_file:
+    descr: File name of the script without path.
+
+  script_path:
+    descr: Path of script file starting at root directory of replication package.
+
+  script_num:
+    descr: (Optional) an integer describring the number of the script file as used in repbox to assess files.
+    type: int
+
+  code_line_start:
+    descr: The start line of the code in the source file.
+    type: int
+
+  code_line_end:
+    descr: The end line of the code in the source file.
+    type: int
+

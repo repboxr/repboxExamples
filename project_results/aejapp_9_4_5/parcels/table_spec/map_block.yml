@@ -1,0 +1,42 @@
+name: map_block
+
+descr: |
+  TO DO: DONT KNOW HOW TO DEAL WITH SMALL REGS:
+  HOW AND WHEN WILL BLOCK BE CHANGED. WHAT ABOUT REGRESSION STATS?
+  PERHAPS WE DONT USE THE BLOCK TABLE?
+
+  A block consists of a set of cells of an article's table.
+
+  Often a block consists of all cells in a column of a table,
+  or only a subset of rows. The exact definition of a block
+  depends on which cells match well together
+
+  This means the exact definition of a block can depend what matches
+  well together and not only on the information in the article
+
+  Descripe the chosen map between table cells in an article
+  and code chunks.
+
+fields:
+  mapid:
+    type: int
+    descr: In principle, we might consider multiple maps.
+
+  tabpos:
+    type: int
+
+  block:
+    type: int
+
+  cmd:
+    descr: We expect every block to map to a single command type
+
+  runid:
+    descr: Will only be positive if the block is supposed to map to a single command
+    type: int
+
+  regid:
+    descr: Only positive if the block is matched to a regression
+    type: int
+
+

@@ -1,0 +1,125 @@
+# Fields with one entry per regression
+
+name: reg
+
+descr: |
+  Basic information stored for each regression.
+
+unique_index:
+  main_index: [artid, step, variant]
+
+fields:
+  artid:
+    descr: ID of the article whose supplement is analyzed. Typically the EJD project name like aer_110_3_2
+    synonym: project
+
+  step:
+    descr: |
+      Analysis step in the DAP of the project.
+
+      If we have different languages, there will be an offset in step as follows:
+      Stata: 0
+      R: 1e8 (100 000 000)
+
+      So that the combination of artid and step will uniquely identify each regression, also across
+      languages.
+    type: int
+
+  runid:
+    type: int
+    descr: |
+      Alternative to step as index. Maps to a row in run_df.
+
+  variant:
+    descr: Possible a variant of the regression that has transformed certain commands. Default is 'o'.
+    val_descr:
+      sb: >
+        stata baseline: This is the baseline specification of the regression in Stata given that
+        original regression is in Stata.
+      so: >
+        stata original: the original regression run in Stata not the stata base run via metareg.
+
+        This run will typically not be stored, except if there is a difference to the stata base run,
+        then we need to the info for debugging.
+      rb: >
+        r baseline: the R baseline regression
+      ro: >
+        r original: the original R regression (not from DAP). Will only be stored if results differ
+        from r baseline in order to find problem in DAP.
+
+  lang:
+    descr: >
+      Language in which regression command is run in this variant.
+      E.g. if this variant corresponds to an original Stata command that is now
+      run in R, lang would be 'r'.
+    values: [stata, r]
+
+  cmdline:
+    descr: Code that calls the regression command
+
+  cmd:
+    descr: Name of the regression command, e.g. ivreg2 in Stata.
+
+  ncoef:
+    descr: Number of regression coefficients (exlcuding absorbed fixed effects)
+    type: int
+
+  nobs:
+    descr: Number of observations used in the regression (excluding NA rows)
+    type: int
+
+  nobs_org:
+    descr: Original size of data set before NA rows are excluded
+    type: int
+
+  timevar:
+    descr: Timeseries variable if explicitly set
+
+  panelvar:
+    descr: ID variable in a panel data set
+
+  tdelta:
+    descr: Stata's tdelta argument that specifies gap size in timevar. Cannot really deal with it yet.
+    type: int
+
+  iv_code:
+    descr: Does the code suggest that this is an IV regression?
+    type: bool
+
+  se_category:
+    descr: Category of standard errors
+    values: [iid, robust, cluster,boot, jack]
+    val_descr:
+      iid: Equals se_type="iid"
+      cluster: Equal se_types cluster, twoway and multiway
+
+  se_type:
+    descr: More granular specification of type of standard error than category
+    values: [iid, hc1, hc2, hc3, hc4, hc5, nw, dk, cluster, twoway, multiway, conley, boot, jack]
+
+  se_args:
+    descr: |
+      A string that stores possible additional arguments that specify the se.
+      Either simple semicolon separed list key1=val1;key2=val2
+      or a JSON format (starts with { or [).
+      Examples:
+      nw: lag=1;prewhite=FALSE;adjust=TRUE
+      cluster: cluster=myvar
+      twoway: cluster1=myvar1;cluster2=myvar2
+
+  r2:
+    descr: r-squared
+    type: num
+
+  # adj_r2:
+  #   descr: r-squared
+  #   type: num
+  #
+  # df_r:
+  #   descr: Residual degrees of freedom
+  #   type: int
+  #
+  # F:
+  #   descr: F-statistic
+  #   type: num
+

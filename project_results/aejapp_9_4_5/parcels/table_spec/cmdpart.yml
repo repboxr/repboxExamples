@@ -1,0 +1,72 @@
+# Fields with one entry per regression
+
+name: cmdpart
+
+descr: |
+  Represents the original regression command line with different placeholders that
+  can be substituted. This will allow two things:
+
+  1. Understand structure of regression command e.g. search for standard error
+
+  2. Easier change regression command in Stata
+
+  To generate (or update) the cmdpart table only the cmdline shall be needed.
+
+unique_index:
+  main_index: [artid, step, part]
+
+index:
+  index2: [tag, part]
+
+fields:
+  artid:
+
+  step:
+    type: int
+
+  parent:
+    descr: Name of the parent part. Empty for the "main" part and otherwise the name
+           of the parent string for which this is a part.
+
+  part:
+    descr: Name of the regression part. Will also be used as placeholde.
+    val_descr:
+      main: the complete cmdline with the different placeholders
+
+      pre: Prefix before main command, e.g. xi, capture or nosily (has counter)
+
+      cmd: the main command
+
+      varlist: The regression variables / terms
+      v: Regression term (with counter) ...
+
+      all_opt: the complete options str
+
+      opt_str: the first option string ... (all have counter)
+      opt: name of the first option ...
+      opt_arg: arguments of the first option ...
+
+      if_str: The if condition including preceding "if "
+      in_str: The in condition including preceding "in "
+      weights_str: The weights
+
+  counter:
+    descr: Some part may occur multiple times like v or opt_str. We store the counter separately
+    type: int
+
+  content:
+    descr: The content of the placeholder in the original cmdline
+
+
+  tag:
+    descr: |
+      Additional tag for the placeholder that may differ from part
+      part may more often contain information about the position in the cmdline
+      while tag may add information about the function inside the regression
+    val_descr:
+      se: For options referencing to standard errors
+      xi: If the prefix is the xi command
+      depvar: is the regression variable a dependent variable
+      endovar: is the regression variable endogenous
+      instrvar: is the regression variable an instrument
+

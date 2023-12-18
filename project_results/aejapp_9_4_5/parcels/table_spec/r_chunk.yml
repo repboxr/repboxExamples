@@ -1,0 +1,32 @@
+name: r_chunk
+
+descr: |
+  A chunk is a a piece of R code that would be evaluated together
+  when the content of the R script would be copied into
+  the console. We collect output for chunks
+
+fields:
+  script_num:
+    type: int
+
+  chunkid:
+    type: int
+    descr: Integer for the expression in the parse data.
+
+  line1:
+    descr: start line
+    type: int
+
+  line2:
+    descr: end line
+    type: int
+
+  col1:
+    descr: start column
+    type: int
+
+  col2:
+    descr: end column
+
+  mod_code:
+    descr: The code after repbox modififcations were inserted.

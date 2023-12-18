@@ -1,0 +1,98 @@
+name: regvar
+
+descr: >
+  Contains information about the regression variables their roles and interactions,
+  based on the regression formulas. We also note whether or not a variable is used
+  as factor / fixed effect or numerically.
+
+  Roles can be dependendent variable, explanatory variable, instruments, cluster, weight,
+  timevar, panelvar.
+
+  If the regression specifies interaction terms like
+
+  x1##x2
+
+  we have an entry for each element, i.e. x1 and x2.
+
+  Background statistics of the variables will be stored in colstat_num and colstat_factor.
+
+fields:
+  artid:
+    descr: Project name. Typically ejd id of the article like aer_101_1_5
+
+  step:
+    descr: Analysis step in the DAP of the project
+    type: int
+
+  variant:
+    descr: Variant of the run regression.
+
+  cterm:
+    descr: Canoncial name of the regression variable. Does not include value for factors, e.g. 'color'
+
+  ia_cterm:
+    descr: Canonical name of interaction term this variable is a part of. If it is not part of an ia_term,
+           this is simply cvar.
+
+  basevar:
+    descr: |
+      Original variable in the data set from which this variable is computed from, e.g. if
+      if we use Stata code to generate a lag variable, then it is the original variable name.
+
+  role:
+    descr: Role of the variable in the regression
+    values: [dep, exo, endo, instr, weight, cluster]
+
+  var_org_type:
+    descr: Original type of the variable
+    values: [integer, numeric, dummy, factor, date, datetime]
+
+  var_reg_type:
+    descr: Type of the variable as used in the regression
+    values: [numeric, dummy, factor]
+
+  ia_reg_type:
+    descr: Type of the interaction term used in the regression. If ia_num = 1 equal to var_type.
+    values: [numeric, dummy, factor, dummy_numeric, factor_numeric]
+
+  absorbed_fe:
+    descr: Only relevant for explanatory variables of ia_type=factor. Is the variable used as absorbed fixed effect?
+    type: bool
+
+  main_pos:
+    descr: Position of the explanatory variable / cluster variable in the regression command
+    type: int
+
+  ia_pos:
+    descr: If part of an interaction effect the position of this variable in the interaction term
+    type: int
+
+  ia_num:
+    descr: Number of variables that make up an interaction term. If 1 we don't have an interaction term.
+    type: int
+
+  ia_source_expr:
+    descr: Expression of the interaction term as specified in the code
+
+  var_source_expr:
+    descr: Expression of the interaction term as specified in the code
+
+  transform:
+    descr: |
+      Applied transformation of the basic variable in the regression formula.
+
+      The transformations L, F, S, D correspond to the Stata time series transformation
+      operators as specified in the Stata manual:
+      https://www.stata.com/manuals/u11.pdf#u11.4.4
+    values: [log, L, F, S, D]
+    val_descr:
+      L: lag
+      F: lead (forward)
+      D: |
+        difference to previous period value
+        difference if transform_par > 1 the n'th difference
+      S: |
+        seasonal difference. We have D1=S1 but D2 != S2.
+        If transform_par > 1 the difference to the lagged valued transform_par units ago.
+  transform_par:
+    descr: Parameters of the transformation. If more than one parameter, stored as a comma separated list.

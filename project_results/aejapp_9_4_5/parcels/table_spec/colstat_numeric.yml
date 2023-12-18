@@ -1,0 +1,67 @@
+name: colstat_numeric
+
+descr: >
+  Contains information about numerical variables used in the regression.
+  This can also contain information about generated dummies or interaction terms,
+  specified by a cterm, e.g. x1=1 or x1=5:x2.
+
+  The statistics can be used e.g. to compute normalized regression coefficients.
+
+fields:
+  artid:
+
+  step:
+    type: int
+
+  variant:
+
+  cterm:
+    descr: Canoncial name of the regression term. For factors includes the value, e.g. 'color=blue'.
+
+  na_num:
+    descr: Number of NA values in the original data set before NA rows are dropped in regression
+    type: int
+
+  mean_org:
+    descr: Mean computed on the original data set
+    type: num
+
+  sd_org:
+    descr: Standard deviation of the variable computed on the original data set
+    type: num
+
+  min:
+    descr: Minimum of the variable computed on the regression data set
+    type: num
+
+  max:
+    descr: Maximum of the variable computed on the regression data set
+    type: num
+
+  mean:
+    descr: Mean computed on the regression data set
+    type: num
+
+  sd:
+    descr: Standard deviation of the variable computed on the regression data set
+    type: num
+
+  median:
+    descr: Median of the variable computed on the regression data set
+    type: num
+
+  q10:
+    descr: 10% quantile of the variable computed on the regression data set
+    type: num
+
+  q25:
+    descr: 25% quantile of the variable computed on the regression data set
+    type: num
+
+  q75:
+    descr: 75% quantile of the variable computed on the regression data set
+    type: num
+
+  q90:
+    descr: 90% quantile of the variable computed on the regression data set
+    type: num

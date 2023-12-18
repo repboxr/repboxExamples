@@ -1,0 +1,29 @@
+name: supp_header
+
+descr: >
+  Basic information about the supplement
+
+fields:
+  artid:
+
+  journ:
+
+  supp_version:
+
+  supp_repo:
+    values: [oi, dv, ze, ms]
+
+  supp_url:
+    descr: URL of supplement
+
+  supp_doi:
+    descr: doi of supplement
+
+  supp_citation:
+    descr:
+
+  license_code:
+    descr: Short text of license file like CC-BY 4.0
+
+  license_data:
+    descr: Short text of license file like CC-BY 4.0

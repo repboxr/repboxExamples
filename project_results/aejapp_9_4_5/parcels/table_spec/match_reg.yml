@@ -1,0 +1,75 @@
+# Fields with one entry per regression
+
+name: match_reg
+
+descr: |
+  Summary statistic of the matching quality between article and code regression
+  pairs. Contains matching score for coefficients / standard errors, as
+  well as for regression statistics.
+  Roughly the matching score is the average of matched numbers, but it is
+  slightly adapted, e.g. a little rounding error still gives a positive score.
+  Only regression pairs are considered that have at least a matching score of 0.5
+  for the coefficients / se.
+index:
+  main_index: [artid, variant, step, regid]
+
+fields:
+  artid:
+    descr: ID of the article that is analyzed.
+
+  variant:
+    descr: Variant of the supplement regression that is matched
+
+  step:
+    descr: ID of reg in supplement
+
+  runid:
+    type: int
+
+  regid:
+    descr: ID of reg in article
+
+
+  paren_type:
+    descr: What is most likely shown in the parentheses
+
+  match_score:
+    descr: |
+      Number between 0 and 1 describing the overall match quality.
+      This number only uses information from the number of matched coefficients,
+      standard errors (or t / p) and matched statistics.
+      It is subjectively decided how much close matches (one deci distance away)
+      count.
+    type: num
+
+  coef_match_score:
+    type: num
+
+  stat_match_score:
+    type: num
+
+  art_ncoef:
+    type: int
+
+  code_ncoef:
+    type: int
+
+  art_nstat:
+    type: int
+
+  code_nfoundstat:
+    descr: |
+      Just the number of presented stats from the article that
+      we could match by name, even if the values are wrong.
+      Only stats that could be matched by name enter the match_core
+    type: int
+
+  tabid_ref_match:
+    descr: |
+      Do the tabid references from the code comment match the tabid
+      from the article?
+      +1 they match
+      -1 don't match
+      0 at least one tabid is not well specified
+    type: int
+

@@ -1,0 +1,43 @@
+# Fields with one entry per regression
+
+name: stata_log_num
+
+descr: |
+  General information about a cell in an extracted table in an article.
+
+index:
+  main_index: [artid, runid]
+
+fields:
+  artid:
+    descr: ID of the article that is analyzed.
+
+  runid:
+    type: int
+
+  # orgline:
+  #   descr: Original line in the script.
+  #   type: int
+  #
+  # cmd:
+  #   descr: Stata command
+
+  row:
+    type: int
+
+  ccol_start:
+    type: int
+
+  ccol_end:
+    type: int
+
+  num_label:
+    descr: Sometimes a direct label for the number can be extracted from the log file
+
+  num_str:
+
+  num:
+    type: num
+
+  num_deci:
+    type: int

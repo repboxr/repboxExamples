@@ -1,0 +1,16 @@
+name: header
+
+descr: >
+  Basic information about a metareg run
+
+fields:
+  artid:
+
+  metaid:
+
+  version_of:
+    descr: >
+      A label of which version is stored here usually a package name like "fixest"
+
+  version:
+    descr: A version number. Will be stored as a string since not all versions may be correct numbers like 4.05

@@ -1,0 +1,114 @@
+name: header
+
+descr: >
+  Basic information about a metareg run
+
+fields:
+  artid:
+
+  metaid:
+
+  main_metaid:
+    descr: |
+      Assume you have a metareg study wth metaid "mystudy" that runs with Stata 17.
+      You may want to run the study again but use Stata 18 but keep both results.
+      You might then assign the metaid "mystudy:Stata18" to version with Stata18
+      and set main_metaid="mystudy". So main_metaid allows to find different versions
+      of the same metastudy.cYou should always have a "main" version where metaid=main_metaid
+
+  version:
+    type: num
+    descr: |
+      The version number of your metareg study. This should only change if
+      the code of your metareg study changes, e.g. creates different tables.
+      If you have different versions that differ only by the used version of Stata, R
+      or a package use instead different metaid with same main_metaid (see above).
+
+  dap_version:
+    type: num
+    descr: >
+      The version of the data analysis plan (DAP) under which this metareg analysis
+      was run.
+
+      When the base metastudy is run, a DAP will be generated for this code supplement.
+      The DAP generates data set caches and specifies all the code lines that contain regression commands that could be
+      possibly analysed and assigns each regression a number (step) that will be used as index
+      in many tables. All other metareg studies will use the DAP generated in the base run.
+
+      For a given repbox version, a DAP uses a list of stata commands that are considered regression
+      commands like regress, ivreg2, reghdfe, probit ... Only the regression commands in that list
+      can be studies by a metareg study.
+
+      While we tried for a comprehensive list new regression commands may developed for
+      Stata in the future that we also want to study with metareg.
+      If we add the command to the list and a data and code supplement has this command
+      the newly generated DAP will use different step numbering than the old DAP.
+      If we have a metareg study run with the old DAP version and one with the new DAP version,
+      their generated data will not be compatible since the "step" variable might refer to
+      different regressions.
+
+      To detect such issues we must store the dap version for each metareg run.
+      There will be functions that check whether different DAP versions are a problem
+      for a given data and code supplement or not.
+      They are typically only a problem if the supplement contains a regression command
+      that has been newly added to the list of regression commands repbox knows.
+
+  se_parser_version:
+    descr: |
+      Parsing of standard errors is complex since every Stata command may have some special
+      syntax. This means over time we may see updated of the parsing code.
+      The se_parser_version helps to keep track if the stored se info is
+      up to date.
+    type: num
+
+  r_version:
+    descr: The R version
+
+  stata_version:
+    type: num
+    descr: The Stata version. Can be NA if no Stata used.
+
+  timestamp:
+    descr: When was the analysis run? Will be typically set at the start time.
+
+
+  total_runtime:
+    descr: Total runtime of this metareg study for the given artid
+
+  num_studied:
+    descr: |
+      The number of regressions of the code supplement that have been studied
+      in this metastudy.
+    type: int
+
+  num_problem:
+    descr: |
+      The numer of regressions for which regcheck notes a problem
+      or did_run = FALSE.
+      If unequal 0 this suggests a bug that should be assessed
+      an ideally corrected.
+    type: int
+
+
+  num_large_deviation:
+    descr: |
+      The number of regressions that run without noted problem about
+      for which the deviation stored in regcheck exceeds the
+      specified tolerable_deviation.
+    type: int
+
+  os_type:
+    descr: String describing the type of operation system, like "windows" or "unix"
+
+  system_info:
+    descr: An optional string describing the hardware
+
+  problem:
+    descr: |
+      A string that may note a general problem. Problems for specific regressions
+      will be noted in regcheck instead and indicated by num_problem > 0
+      Typically this problem string will be empty.
+
+
+  comment:
+    descr: Optional free text comment for this study run. Don't make very long comments.

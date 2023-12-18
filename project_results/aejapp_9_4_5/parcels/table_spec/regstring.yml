@@ -1,0 +1,23 @@
+name: regstring
+
+descr: |
+  Additional regression information stored as strings like those provided by broom::glance.
+  Will not contain contain numeric and boolean values, which are stored in reg_stats instead.
+
+unique_index:
+  main_index: [artid, step, variant, string_name]
+
+index:
+  index2: stat_name
+
+fields:
+  artid:
+
+  step:
+    type: int
+
+  variant:
+
+  string_name:
+
+  string_val:

@@ -1,0 +1,38 @@
+name: r_call
+
+descr: |
+  Parsed info about function calls in R scripts.
+
+fields:
+  artid:
+
+  script_num:
+    type: int
+
+  callid:
+    type: int
+
+  fun:
+    descr: Name of the called function
+
+  code:
+    descr: Complete code of the call
+
+  line1:
+    descr: start line
+    type: int
+
+  line2:
+    descr: end line
+    type: int
+
+  col1:
+    descr: start column
+    type: int
+
+  col2:
+    descr: end column
+
+  funid:
+    type: int
+    descr: If the call is inside a user defined function the id of that function, see r_fun table.

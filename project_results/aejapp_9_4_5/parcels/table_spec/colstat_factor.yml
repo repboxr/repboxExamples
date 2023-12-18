@@ -1,0 +1,54 @@
+name: colstat_factor
+
+descr: >
+  Contains information about factor variables used in the regression.
+
+  Can also treat information about integer variables treated as factors.
+
+fields:
+  artid:
+
+  step:
+    type: int
+
+  variant:
+
+  cterm:
+    descr: Canoncial name of the regression term. For factors includes the value, e.g. 'color=blue'.
+
+  na_num:
+    descr: Number of NA values in the original data set before NA rows are dropped in regression
+    type: int
+
+  distinct_num_org:
+    descr: Number of distinct values (excluding NA) in the original data set
+
+  distinct_num:
+    descr: Number of distinct values (excluding NA) in the regression data set
+
+  top1_val:
+    descr: Value of the most common level in the regression data set
+
+  top1_num:
+    descr: Share of top1_val in the regression data set
+
+  top1_num_org:
+    descr: Share of top1_val in the original data set
+
+  top2_val:
+    descr: Value of the most common level in the regression data set
+
+  top2_num:
+    descr: Share of top2_val in the regression data set
+
+  top2_num_org:
+    descr: Share of top2_val in the original data set
+
+  top3_val:
+    descr: Value of the most common level in the regression data set
+
+  top3_num:
+    descr: Share of top2_val in the regression data set
+
+  top3_num_org:
+    descr: Share of top2_val in the original data set

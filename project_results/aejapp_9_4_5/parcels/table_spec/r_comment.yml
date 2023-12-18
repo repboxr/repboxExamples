@@ -1,0 +1,27 @@
+name: r_comment
+
+descr: |
+  Parsed info about function calls in R scripts.
+
+fields:
+  artid:
+
+  script_num:
+    type: int
+
+  text:
+    descr: Content of the comment
+
+  line1:
+    descr: line
+    type: int
+
+  line2:
+    descr: end line
+    type: int
+
+  funid:
+    type: int
+
+  above_funid:
+    type: int

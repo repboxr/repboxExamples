@@ -1,0 +1,51 @@
+name: repbox_file
+
+descr: |
+  Information about all files in a supplement.
+
+unique_index:
+  main_index: [artid, file_path]
+
+fields:
+  artid:
+
+  file_path:
+    descr: |
+      The path to the code file. A relative path starting at the supplements
+      main directory.
+
+  file_name:
+    descr: |
+      Name of the file without path
+
+  file_type:
+    descr: File extension of the script in which the original regression command was performed
+    values: [do, r]
+
+  mb:
+    descr: File size in MB
+    type: num
+
+  mb_org:
+    type: num
+
+  mb_mod:
+    type: num
+
+  mtime_org:
+    descr: Time stamp when the file was last modified in the original supplement.
+
+  mtime_mod:
+    descr: |
+      Time stamp when the file was last modified in the supplement after our
+      reprodction run.
+
+  in_org:
+    descr: Was the file in the original version of the supplement?
+    type: bool
+
+  in_mod:
+    descr: |
+      Was the file in the modified version of the supplement,
+      after we have run the automtic reproduction.
+    type: bool

@@ -1,0 +1,38 @@
+name: script_file
+
+descr: |
+  Additional information about R and Stata code files in a supplement. Similar to
+  code source but without the source code.
+  We currently add only parcels for Stata and R.
+
+
+unique_index:
+  main_index: [artid, file_path]
+
+fields:
+  artid:
+
+  file_path:
+    descr: |
+      The path to the code file. A relative path starting at the supplements
+      main directory.
+
+  file_name:
+    descr: |
+      Name of the file without path
+
+  file_type:
+    descr: |
+      Lower case version of file extension of the script file.
+
+
+  script_num:
+    descr: (Optional) an integer describring the number of the script file as used in repbox to assess files.
+    type: int
+
+  num_lines:
+    descr: Number of code_lines
+
+  source_added:
+    descr: Was the file source added?
+    type: bool

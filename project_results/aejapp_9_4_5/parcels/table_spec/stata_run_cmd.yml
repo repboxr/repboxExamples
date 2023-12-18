@@ -1,0 +1,55 @@
+name: stata_run_cmd
+
+descr: |
+  Parsed info about all run stata commands. Corresponds to run.df in
+  our internal repbox data
+
+unique_index:
+  main_index: [artid, root_file_path, file_path, counter]
+  main_index2: [artid, runind]
+
+fields:
+  artid:
+
+  runid:
+    type: int
+    descr: unique index for every run command for the article
+
+  root_file_path:
+
+  file_path:
+
+  counter:
+    type: int
+
+  line:
+    descr: Line in the canonical version of the script.
+    type: int
+
+  cmd:
+    descr: Stata command
+
+  cmdline:
+    descr: The full command line
+
+  found_path:
+    descr: |
+      If the command has a file or directoy argument this field will
+      contain the found file / directory path
+      after our automatic path correction. The path is relative to the
+      supplements main directory.
+
+  start_time:
+    descr: The time command started
+
+  end_time:
+    descr: The time the commad ended
+
+  errcode:
+    descr: Error code after running the file. A 0 indicated no error.
+
+  out_img_file:
+    descr: |
+      If an image is generated we attempt to save it. Then this field
+      contains the file name of the image.
+

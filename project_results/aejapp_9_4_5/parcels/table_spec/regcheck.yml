@@ -1,0 +1,76 @@
+name: regcheck
+
+descr: |
+  Check on whether regression did run as expected.
+
+unique_index:
+  main_index: [artid, step, variant]
+
+fields:
+  artid:
+
+  step:
+    type: int
+
+  variant:
+
+  did_run:
+    descr: Did the step finish running?
+    type: bool
+
+  problem:
+    descr: |
+      A text describing potential problems. If the step did not run,
+      it contains the error message.
+
+  deviation:
+    descr: |
+      A numeric deviation measure. The exact details depend on the variant.
+      Often it will use a value of "max_deviation" from "regcoef_diff".
+
+      Even if no problem is described, a high deviation value may still
+      indicate a problem that should be explored.
+    type: num
+
+  tolerable_deviation:
+    descr: |
+      A number that specifies the maximum deviation in regcheck
+      that is deemed tolerable.
+
+      This number is the subjective assessment of the metastudy designer.
+
+      For example if we re-run the same stata code as in the original study,
+      we may say the tolerable deviation is 0.
+      If we translate code from Stata to R the tolerable deviation
+      is usually larger.
+
+      An NA value means that no tolerable deviation was specified,
+      e.g. because it makes no sense given the definition of deviation
+      for this entry.
+
+      You typically would not fill the problem variable just because
+
+      deviation > tolerable_deviation
+
+      Problems correspond rather to concrete errors that occur
+      when running. This inqequality can be checked seperately.
+      The header table has a separate counter variable
+      num_reg_excess_deviation to count regressions without other problems
+      where the deviation exceeds the tolerable deviation.
+
+    type: num
+
+
+  comment:
+    descr: |
+      Optional additional comment. Will typically be empty.
+      The comment can either provide additional information for
+      a problem that may help debugging or note a point
+      that shall not be considered a problem but
+      may be informative nevertheless.
+      Avoid excessive long comments since regcheck will be
+      typically stored inside the core parcel of
+      metareg studies.
+
+
+

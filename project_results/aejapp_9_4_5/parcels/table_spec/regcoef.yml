@@ -1,0 +1,52 @@
+name: regcoef
+
+descr: >
+  Coefficient table. Contains one entry per regression coefficient.
+  May also contain entries for coefficients that are dropped, e.g.
+  for the dropped value of a dummy variable. For a dropped coefficient
+  the column coef is NA.
+
+fields:
+  artid:
+    descr: Project name. Typically EJD id of the article
+    synonym: project
+
+  step:
+    descr: Analysis step in the DAP of the project
+    type: int
+
+  variant:
+    descr: Possible a variant of the regression that has transformed certain commands. Default is 'sb' (stata baseline).
+
+  cterm:
+    descr: Canonical name of the regression variable. For factors includes the value, e.g. 'color=blue'.
+
+  shown_term:
+    descr: Name of the regression coefficient as shown in the regression output
+
+  label:
+    descr: Label of the regression term / variable
+
+  coef:
+    descr: Estimated coefficient
+    type: num
+
+  se:
+    descr: Standard error of coefficient
+    type: num
+
+  t:
+    descr: t-value of coefficient
+    type: num
+
+  p:
+    descr: p-value of coefficient
+    type: num
+
+  ci_low:
+    descr: Lower bound of 95% CI
+    type: num
+
+  ci_up:
+    descr: Upper bound of 95% CI
+    type: num
